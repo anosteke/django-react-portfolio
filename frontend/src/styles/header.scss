@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    position: fixed;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
+    background-color: rgb(131 131 131 / 14%);
+    z-index: 10;
+  
+    .nav {
+      display: flex;
+      gap: 1rem; // espace entre les boutons
+  
+      a {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        transition: text-decoration 0.3s ease;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -10;
+      background-size: cover;
+      background-position: center;
+    }
+  }

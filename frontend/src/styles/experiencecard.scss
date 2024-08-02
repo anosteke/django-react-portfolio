@@ -1,0 +1,127 @@
+$primary-color: #2e7d32;
+$secondary-color: #00796b;
+$background-color: #e0f7e9;
+$background-color-light: #eef9f3;
+$border-color: #b0e3c8;
+$tag-background: #a5d6a7;
+$tag-color: #1b5e20;
+$text-color: #333;
+$secondary-text-color: #666;
+$description-color: #555;
+
+.experience-card {
+  background: $background-color;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  color: $text-color;
+  transition: all 0.3s ease;
+  width: 50vw;
+
+  &.open {
+    .experience-body {
+      max-height: 1000px; // arbitrary large number
+      opacity: 1;
+    }
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.open {     
+      .experience-body {
+        background-color: $background-color-light;
+      }
+    }
+
+    h2 {
+      font-size: 1em;
+      margin: 0;
+      color: $primary-color;
+    }
+
+    .title-company {
+      font-size: 1em;
+      color: $secondary-text-color;
+      flex-grow: 0.9;
+    }
+
+    .duration {
+      font-size: 1em;
+      color: $secondary-text-color;
+    }
+
+    .toggle-button {
+      background: none;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      color: $primary-color;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .experience-body {
+    color: $description-color;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    .location, .company-link, .description {
+      margin: 10px 0;
+    }
+
+    .complementary-information {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: $border-color 3px inset;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    .company-link {
+      color: $secondary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .skill-tag {
+        background: $tag-background;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 0.9em;
+        color: $tag-color;
+      }
+    }
+  }
+}
+
+/* Media query to hide the flex item when the screen size is smaller than 800px */
+@media screen and (max-width: 800px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+

@@ -1,0 +1,38 @@
+// Primary colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+// Green shades
+$color-green-light: #a8d5ba;
+$color-green: #4caf50;
+$color-green-dark: #388e3c;
+$color-green-darker: #2e7d32;
+
+// Gray shades (to complement the black)
+$color-gray-light: #e0e0e0;
+$color-gray: #9e9e9e;
+$color-gray-dark: #616161;
+$color-gray-darker: #424242;
+
+// Accent colors
+$color-accent-light: #80e27e;
+$color-accent-dark: #1b5e20;
+
+// Text colors
+$color-text-primary: $color-black;
+$color-text-secondary: $color-gray-dark;
+$color-text-inverse: $color-white;
+
+// Background colors
+$color-background-primary: $color-white;
+$color-background-secondary: $color-gray-light;
+$color-background-accent: $color-green-light;
+
+// Borders
+$color-border: $color-gray-dark;
+$color-border-light: $color-gray-light;
+
+// Success, warning, and error colors
+$color-success: $color-green;
+$color-warning: #ff9800; // Optional, add if you need warning colors
+$color-error: #f44336; // Optional, add if you need error colors

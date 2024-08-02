@@ -1,0 +1,9 @@
+@mixin rectangle($height, $color1, $color2) {
+    width: 100%;
+    height: $height;
+    background: linear-gradient(to bottom right, $color1, $color2);
+  }
+  
+  .rectangle-steelseries {
+    @include rectangle(200px, orange, darkorange);
+  }
