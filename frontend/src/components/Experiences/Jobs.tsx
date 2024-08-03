@@ -1,5 +1,4 @@
 
-import SteelSeriesImgSrc from "../../../public/steelserieslogo.png"
 import WaveSeparator from "../WaveSeparator";
 import "../../styles/jobs.scss"
 import ExperienceCard from "./ExperienceCard";
@@ -22,7 +21,7 @@ const Jobs = () => {
 
   return (
     <div className="jobs">
-      <h3 className="job-title">Professional Experience 🧑🏽‍💻</h3>
+      <h3 className="job-title font-extrabold">Professional Experience 🧑🏽‍💻</h3>
       <div className="jobs-list">
             <ExperienceCard title='Software Engineer' company='INSEE' description={jobDescInsee} duration='2024 - now' link='insee.com' location='Lille' skills={['Python', 'React', 'Java', 'Spring']} key={'clé'}/>
             <ExperienceCard title='Intern Software Engineer' company='SteelSeries' description={jobDescSteelSeries} duration='2023 - 2024' link='steelseries.com' location='Lille' skills={['Python', 'React', 'Pywebview', 'OpenCV', 'TypeScript', 'Redux']} key={'clé'}/>

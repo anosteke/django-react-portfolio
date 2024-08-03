@@ -5,7 +5,7 @@ const Studies = () => {
 
   return (
     <div className="jobs">
-      <h3 className="job-title">Academic Cursus 🎓</h3>
+      <h3 className="job-title font-extrabold">Academic Cursus 🎓</h3>
     </div>
   );
 };
