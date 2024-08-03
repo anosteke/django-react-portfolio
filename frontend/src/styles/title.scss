@@ -2,6 +2,7 @@
 
 .title
 {
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: absolute;
   top: 0;
   display: flex;
@@ -12,12 +13,20 @@
   align-content: center;
   align-items: center;
   height: 800px;
+  text-align: center;
 }
 
 .name
 {
     color: #f4f4f4;
     font-size: 30px;
+}
+
+.greeting 
+{
+    color: #f4f4f4;
+    font-size: 20px;
+    
 }
  
 .profile-pic
@@ -77,9 +86,9 @@
 .job::after {
     content: "";
     width: 2px;
-    height: 3vh;
+    height: 25px;
     line-height: -50px;
-    background: #9dff7f;
+    background: #ffffff;
     display: inline-block;
     animation: cursor-blink 1.5s steps(2) infinite;
   }
@@ -91,8 +100,8 @@
   }
 
   .arrow {
-    width: 100px;
-    margin-top: 150px;
+    width: 300px;
+    margin-top: 100px;
     transition: transform .7s ease-in-out;
     padding: 100px;
   }

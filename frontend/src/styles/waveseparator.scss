@@ -1,19 +1,14 @@
-svg {
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    object-fit: none;
-    /* height: 900px; */
-    width: 100%;
-    position: relative;
-    /* width: calc(228% + 1.3px); */
-    /* max-width: 100%; */
-}
 .wave-container {
-
-    /* resize: none; */
     width: 100%;
-    height: 300px;
-    overflow: auto;
-    margin-bottom: -30px;
+    height: 250px; /* Fixed height */
+    overflow: hidden;
+    position: relative;
+    margin-top: 200px;
+}
+
+.wave-container svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }

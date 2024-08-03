@@ -1,7 +1,12 @@
-.job-title
-{
-    margin : 30px;
+@import 'variables';
+
+
+.job-title {
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(45deg, $color-green-light, $color-green-dark 80%);
+    margin: 30px;
     font-size: 50px;
+    -webkit-background-clip: text;
     text-align: center;
 }
 

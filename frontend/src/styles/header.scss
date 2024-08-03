@@ -1,15 +1,15 @@
 .header {
     width: 100%;
-    position: fixed;
-    height: 4rem;
+    height: calc(5em - 2vw);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 1.5rem;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(4px);
     background-color: rgb(131 131 131 / 14%);
     z-index: 10;
+    flex-wrap: wrap;
   
     .nav {
       display: flex;
@@ -38,3 +38,36 @@
       background-position: center;
     }
   }
+
+  .icons
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  .icon
+  {
+    margin: 10px;
+    width: 25px;
+    filter: invert(1);
+  }
+
+  
+  .icon:hover
+  {
+    filter: invert(0)
+  }
+
+// .header-button
+// {
+//   color: white;
+//   background-color: transparent;
+//   border-color: white;
+//   border-width: 1.5px;
+//   border-style: solid;
+//   border-radius: 5px;
+//   border;
+// }

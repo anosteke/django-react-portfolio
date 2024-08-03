@@ -33,6 +33,8 @@ $description-color: #555;
     &.open {     
       .experience-body {
         background-color: $background-color-light;
+        max-height: 1000px; // arbitrary large number
+        opacity: 1;
       }
     }
 
@@ -119,7 +121,7 @@ $description-color: #555;
 }
 
 /* Media query to hide the flex item when the screen size is smaller than 800px */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .hide-on-small {
     display: none;
   }
