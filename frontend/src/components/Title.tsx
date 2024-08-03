@@ -56,9 +56,10 @@ const Title = () => {
           <video className="video" src={videoUrl} autoPlay={true} loop={true} muted={true}/>
         </div>
         <div className="title">
-            <div className="name">Pierre-Raphaël Wozny</div>
+            <div className="greeting">Nice to meet you ! 😊</div>
+            <div className="name">I'm Pierre-Raphaël Wozny</div>
             <div className="job">{text}</div>
-            <img className="arrow" src="https://i.imgur.com/85AJGxP.png"/>
+            {/* <img className="arrow" src="https://i.imgur.com/85AJGxP.png"/> */}
         </div>
         <WaveSeparator />
       </div>
