@@ -7,4 +7,14 @@ class Project(models.Model):
     imageUrl = models.URLField()
 
     def __str__(self):
-        return self.title
+        return self.titleclass Job(models.Model):
+class Job(models.Model):
+    compagny = models.CharField(max_length=30)
+    job = models.CharField(max_length=30)
+    duration = models.CharField(max_length=30)
+    description = models.CharField(max_length=1000)
+    skills = models.JSONField(default=list)
+    url = models.URLField()
+
+    def __str__(self):
+        return self.compagny
