@@ -9,12 +9,14 @@ class Project(models.Model):
     def __str__(self):
         return self.titleclass Job(models.Model):
 class Job(models.Model):
-    compagny = models.CharField(max_length=30)
+    company = models.CharField(max_length=60)
+    location = models.CharField(max_length=30, default="")
     job = models.CharField(max_length=30)
-    duration = models.CharField(max_length=30)
+    startDate = models.DateField(default=datetime.date.today)
+    endDate = models.DateField(null=True, blank=True)
     description = models.CharField(max_length=1000)
     skills = models.JSONField(default=list)
     url = models.URLField()
 
     def __str__(self):
-        return self.compagny
+        return self.company
