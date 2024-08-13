@@ -1,27 +1,39 @@
+@import 'variables';
+
 $primary-color: #2e7d32;
 $secondary-color: #00796b;
-$background-color: #e0f7e9;
-$background-color-light: #eef9f3;
 $border-color: #b0e3c8;
-$tag-background: #a5d6a7;
-$tag-color: #1b5e20;
-$text-color: #333;
-$secondary-text-color: #666;
-$description-color: #555;
+$tag-background: #ffffff;
+$tag-color: #44934a;
+$text-color: #ffffff;
+$secondary-text-color: #ffffff;
+$description-color: #ffffff;
 
 .experience-card {
-  background: $background-color;
+  width: calc(125px + 50vw);
+  max-width: 500px;
+  background: $color-green-dark;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
   color: $text-color;
   transition: all 0.3s ease;
-  width: 50vw;
+  margin: auto;
 
   &.open {
-    .experience-body {
-      max-height: 1000px; // arbitrary large number
-      opacity: 1;
+    background: $color-green-darker;
+
+    .experience-header {
+
+      .toggle-button {
+        color: $color-green-darker;
+        rotate: 180deg;
+        height: 25px;
+        width: 25px;
+        background-color: #ffffff;
+        border-radius: 15%;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
     }
   }
 
@@ -30,24 +42,16 @@ $description-color: #555;
     justify-content: space-between;
     align-items: center;
 
-    &.open {     
-      .experience-body {
-        background-color: $background-color-light;
-        max-height: 1000px; // arbitrary large number
-        opacity: 1;
-      }
-    }
-
     h2 {
       font-size: 1em;
       margin: 0;
-      color: $primary-color;
+      color: $text-color;
     }
 
     .title-company {
       font-size: 1em;
       color: $secondary-text-color;
-      flex-grow: 0.9;
+      flex-grow: 1;
     }
 
     .duration {
@@ -60,62 +64,97 @@ $description-color: #555;
       border: none;
       font-size: 1em;
       cursor: pointer;
-      color: $primary-color;
+      color: $color-green-dark;
+      margin-left: 15px;
+
+      height: 25px;
+      width: 25px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: all 0.3s ease;
 
       &:focus {
         outline: none;
       }
     }
   }
+}
 
-  .experience-body {
-    color: $description-color;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+.experience-body {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: calc(125px + 50vw);
+  max-width: 500px;
+  background: $color-green-dark;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: $description-color;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin-right 0.3s ease, margin-left 0.3s ease;
 
-    .location, .company-link, .description {
-      margin: 10px 0;
+  &.open {
+    max-height: 1000px; // arbitrary large number
+    opacity: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+
+  }
+
+  .location,
+  .company-link,
+  .description {
+    margin: 10px 0;
+  }
+
+  // .description
+  // {
+  //   width: 100%;
+  //   max-width: 1000px;
+  // }
+
+  .complementary-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: $border-color 3px inset;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 5px;
     }
+  }
 
-    .complementary-information {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      border-bottom: $border-color 3px inset;
+  .company-link {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    .location {
-      display: flex;
-      align-items: center;
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 
-      i {
-        margin-right: 5px;
-      }
-    }
-
-    .company-link {
-      color: $secondary-color;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-
-      .skill-tag {
-        background: $tag-background;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 0.9em;
-        color: $tag-color;
-      }
+    .skill-tag {
+      background: $tag-background;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 0.9em;
+      color: $tag-color;
     }
   }
 }
@@ -126,4 +165,3 @@ $description-color: #555;
     display: none;
   }
 }
-

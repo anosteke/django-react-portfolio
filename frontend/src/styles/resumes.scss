@@ -1,0 +1,79 @@
+@import 'variables.scss';
+
+
+.resumes-background {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    box-sizing: border-box;
+    // border: calc(6em - 2vw) solid $color-green-darker;
+    z-index: -1;
+
+    z-index: -5;
+
+
+    .resumes-container {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        height: 75%;
+
+        .resume {
+            background-color: $color-green-dark;
+            color: white;
+            width: 400px;
+            height: 200px;
+            vertical-align: middle;
+            align-content: center;
+            text-align: center;
+            margin-top: 25px;
+            border-radius: 3%;
+
+            &::before {
+                content: ''; // Create an overlay using a pseudo-element
+                backdrop-filter: blur(0px); // Apply blur effect to the overlay
+                transition: backdrop-filter 0.3s ease;
+            }
+
+            &:hover {
+
+                cursor: pointer;
+
+                // On hover, remove the blur effect from the container and create an overlay
+                &::before {
+                    content: ''; // Create an overlay using a pseudo-element
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    backdrop-filter: blur(10px); // Apply blur effect to the overlay
+                    pointer-events: none; // Allow pointer events to pass through
+                    z-index: -1; // Ensure the overlay is behind the child element
+                    transition: backdrop-filter 0.3s ease;
+
+                }
+
+                ~&
+                {
+                    background-color: black;
+                }
+
+                transition: backdrop-filter 0.3s ease;
+
+                
+            }
+
+        }
+    }
+}
+
+
+.video {
+    z-index: -10;
+}

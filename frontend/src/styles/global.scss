@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.app
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   margin: 0;
 
@@ -18,3 +25,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.section-title {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(45deg, $color-green-light, $color-green-dark 80%);
+  margin: 30px;
+  font-size: 50px;
+  -webkit-background-clip: text;
+  text-align: center;
+  z-index: -5;
+
+  @media screen and (max-width: 350px) {
+    // margin: 10px;
+    font-size: calc(10vw);
+  }
+}
+

@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.footer
+{
+  margin-top: 75px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  flex-wrap: wrap;
+  background-color: $color-green-darker;
+  width: 100%;
+}
+
+
+a 
+{
+  margin: 15px;
+}
+
+.categories
+{
+  margin: 50px;
+  color: white;;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.footer-line
+{
+  width: 100%;
+  border-top: 15px solid $color-green-light;
+}

@@ -1,0 +1,18 @@
+.projects-container
+{
+  margin-right: 25px;
+  margin-left: 25px;
+  width: 100%;
+  justify-content: center;
+}
+
+.projects-grid
+{
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  
+}
