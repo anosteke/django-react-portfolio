@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anosteke/django-react-portfolio/tree/gh-pages/static/css/main.87b2d913.css",
-    "main.js": "/anosteke/django-react-portfolio/tree/gh-pages/static/js/main.fbbb08e6.js",
-    "static/js/453.8ab44547.chunk.js": "/anosteke/django-react-portfolio/tree/gh-pages/static/js/453.8ab44547.chunk.js",
-    "index.html": "/anosteke/django-react-portfolio/tree/gh-pages/index.html",
-    "main.87b2d913.css.map": "/anosteke/django-react-portfolio/tree/gh-pages/static/css/main.87b2d913.css.map",
-    "main.fbbb08e6.js.map": "/anosteke/django-react-portfolio/tree/gh-pages/static/js/main.fbbb08e6.js.map",
-    "453.8ab44547.chunk.js.map": "/anosteke/django-react-portfolio/tree/gh-pages/static/js/453.8ab44547.chunk.js.map"
+    "main.css": "./static/css/main.87b2d913.css",
+    "main.js": "./static/js/main.1d1d4cb1.js",
+    "static/js/453.8ab44547.chunk.js": "./static/js/453.8ab44547.chunk.js",
+    "index.html": "./index.html",
+    "main.87b2d913.css.map": "./static/css/main.87b2d913.css.map",
+    "main.1d1d4cb1.js.map": "./static/js/main.1d1d4cb1.js.map",
+    "453.8ab44547.chunk.js.map": "./static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87b2d913.css",
-    "static/js/main.fbbb08e6.js"
+    "static/js/main.1d1d4cb1.js"
   ]
 }
