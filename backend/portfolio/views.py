@@ -10,7 +10,3 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class JobViewSet(viewsets.ModelViewSet):
     queryset = Job.objects.all()
     serializer_class = JobSerializer
-
-
-class ReactAppView(TemplateView):
-    template_name = 'index.html'
