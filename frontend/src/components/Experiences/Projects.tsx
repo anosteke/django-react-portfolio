@@ -8,13 +8,13 @@ const Projects = () => {
   const [projects, setProjects] = useState<ProjectProps[]>([]);
 
   useEffect(() => {
-      axios.get('http://localhost:8000/api/projects/')
-          .then(response => {
-              setProjects(response.data);
-          })
-          .catch(error => {
-              console.error('There was an error fetching the projects!', error);
-          });
+    axios.get('https://prw.pythonanywhere.com/api/projects/')
+      .then(response => {
+        setProjects(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error fetching the projects!', error);
+      });
   }, []);
 
   return (

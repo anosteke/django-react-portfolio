@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "../styles//title.scss"
 import WaveSeparator from "./WaveSeparator";
 
+const videoUrl = "https://www.pythonanywhere.com/user/prw/files/home/prw/django-react-portfolio/backend/mediafiles/videos/background_video.mp4";
+
 const Title = () => {
 
   const [loopNum, setLoopNum] = useState(0);
@@ -11,7 +13,6 @@ const Title = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Software Engineer", "Full Stack Developper", "Video Game Developper"];
   const period = 2000;
-  const [videoUrl, setVideoUrl] = useState("http://localhost:8000/media/videos/background_video.mp4");
 
   useEffect(() => {
     let ticker = setInterval(() => {

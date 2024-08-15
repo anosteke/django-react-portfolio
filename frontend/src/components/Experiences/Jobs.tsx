@@ -10,7 +10,7 @@ const Jobs = () => {
   const [experiences, setExperiences] = useState<ExperienceCardProps[]>([]);
 
   useEffect(() => {
-      axios.get('http://localhost:8000/api/jobs/')
+      axios.get('https://prw.pythonanywhere.com/api/jobs/')
           .then(response => {
             setExperiences(response.data.sort((a : ExperienceCardProps, b : ExperienceCardProps) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()));
           })
