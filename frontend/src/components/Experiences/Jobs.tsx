@@ -1,31 +1,34 @@
 
 import WaveSeparator from "../WaveSeparator";
 import "../../styles/jobs.scss"
-import ExperienceCard from "./ExperienceCard";
-import { useRef } from "react";
-
-const jobDescInsee = `
-More coming...`
-
-const jobDescSteelSeries = `
-- Working for a US/French team in SteelSeries, one of the world leaders in gaming hardware
-- Design and development with React and Python of a software tool for generating configurations from images and videos for automated video clip captures
-- Close collaboration with the team to ensure seamless integration of the tool into the existing ecosystem`
-
-const jobDescLig = `
-- Research into new methods for processing VAD (Voice Activity Detection) output data to create speech segmentation
-- Development and training of supervised learning models
-- Writing of a scientific article`
+import ExperienceCard, { ExperienceCardProps } from "./ExperienceCard";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Jobs = () => {
 
+  const [experiences, setExperiences] = useState<ExperienceCardProps[]>([]);
+
+  useEffect(() => {
+      axios.get('http://localhost:8000/api/jobs/')
+          .then(response => {
+            setExperiences(response.data.sort((a : ExperienceCardProps, b : ExperienceCardProps) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()));
+          })
+
+          .catch(error => {
+              console.error('There was an error fetching the jobs!', error);
+          });
+  }, []);
+
+
   return (
     <div className="jobs">
-      <h3 className="job-title font-extrabold">Professional Experience 🧑🏽‍💻</h3>
+      <h3 className="section-title font-extrabold">Professional Experience 🧑🏽‍💻</h3>
       <div className="jobs-list">
-            <ExperienceCard title='Software Engineer' company='INSEE' description={jobDescInsee} duration='2024 - now' link='insee.com' location='Lille' skills={['Python', 'React', 'Java', 'Spring']} key={'clé'}/>
-            <ExperienceCard title='Intern Software Engineer' company='SteelSeries' description={jobDescSteelSeries} duration='2023 - 2024' link='steelseries.com' location='Lille' skills={['Python', 'React', 'Pywebview', 'OpenCV', 'TypeScript', 'Redux']} key={'clé'}/>
-            <ExperienceCard title='Intern R&D Engineer' company='LIG' description={jobDescLig} duration='2022' link='liglab.fr' location='Grenoble' skills={['Python', 'Pytorch', 'Scikit-Learn', 'Pygad']} key={'clé'}/>
+            {experiences.map(experience => (<ExperienceCard company={experience.company} description={experience.description} startDate={experience.startDate?.substring(0, 4)} endDate={experience.endDate?.substring(0, 4)} job={experience.job} url={experience.url} location={experience.location} skills={experience.skills}/>))}
+            {/* <ExperienceCard title='Software Engineer' company='INSEE' description={jobDescInsee} duration='2024 - now' link='insee.com' location='Lille' skills={['Python', 'React', 'Java', 'Spring']}/>
+            <ExperienceCard title='Intern Software Engineer' company='SteelSeries' description={jobDescSteelSeries} duration='2023 - 2024' link='steelseries.com' location='Lille' skills={['Python', 'React', 'Pywebview', 'OpenCV', 'TypeScript', 'Redux']}/>
+            <ExperienceCard title='Intern R&D Engineer' company='LIG' description={jobDescLig} duration='2022' link='liglab.fr' location='Grenoble' skills={['Python', 'Pytorch', 'Scikit-Learn', 'Pygad']}/> */}
 
       </div>
     </div>
