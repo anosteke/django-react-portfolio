@@ -54,7 +54,7 @@ const Title = () => {
   return (
       <div className="title-wrapper">
         <div className="video-container ">
-          <video className="video" src={videoUrl} autoPlay={true} loop={true} muted={true}/>
+          <video className="video" src={videoUrl} autoPlay={true} loop={true} muted={true} playsInline={true}/>
         </div>
         <div className="title">
             <div className="greeting">Nice to meet you ! 😊</div>
