@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pierreraphaelwozny.com/static/css/main.87b2d913.css",
-    "main.js": "/pierreraphaelwozny.com/static/js/main.77d46b70.js",
-    "static/js/453.8ab44547.chunk.js": "/pierreraphaelwozny.com/static/js/453.8ab44547.chunk.js",
-    "index.html": "/pierreraphaelwozny.com/index.html",
-    "main.87b2d913.css.map": "/pierreraphaelwozny.com/static/css/main.87b2d913.css.map",
-    "main.77d46b70.js.map": "/pierreraphaelwozny.com/static/js/main.77d46b70.js.map",
-    "453.8ab44547.chunk.js.map": "/pierreraphaelwozny.com/static/js/453.8ab44547.chunk.js.map"
+    "main.css": "/django-react-portfolio/tree/main/frontend/static/css/main.87b2d913.css",
+    "main.js": "/django-react-portfolio/tree/main/frontend/static/js/main.a0fbf414.js",
+    "static/js/453.8ab44547.chunk.js": "/django-react-portfolio/tree/main/frontend/static/js/453.8ab44547.chunk.js",
+    "index.html": "/django-react-portfolio/tree/main/frontend/index.html",
+    "main.87b2d913.css.map": "/django-react-portfolio/tree/main/frontend/static/css/main.87b2d913.css.map",
+    "main.a0fbf414.js.map": "/django-react-portfolio/tree/main/frontend/static/js/main.a0fbf414.js.map",
+    "453.8ab44547.chunk.js.map": "/django-react-portfolio/tree/main/frontend/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87b2d913.css",
-    "static/js/main.77d46b70.js"
+    "static/js/main.a0fbf414.js"
   ]
 }
