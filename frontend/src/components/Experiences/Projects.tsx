@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import Project, { ProjectProps } from "./ProjectCard";
-import '../../styles/projects.scss';
 import axios from "axios";
-import { log } from "console";
-
-const projectImage = 'http://localhost:8000/media/images/django-react-portfolio.png'
+import '../../styles/projects.scss';
 
 const Projects = () => {
 

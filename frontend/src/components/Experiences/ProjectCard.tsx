@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import '../../styles/project.scss';
 
-interface ProjectCardProps
+export interface ProjectProps
 {
     title : string;
     url : string;
