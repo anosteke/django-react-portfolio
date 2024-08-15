@@ -20,8 +20,6 @@ const ExperienceCard = ({ job, company, location, url, startDate, endDate, descr
     setIsOpen(!isOpen);
   };
 
-  console.log(url)
-
   return (
     <div>
       <div className={`experience-card ${isOpen ? 'open' : ''}`}>
