@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=o@l$o-u$9h!dhq7+g0qu(#4@m!mr@+z91@!sjad_x)ba#5(_b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['prw.pythonanywhere.com']
+ALLOWED_HOSTS = ['prw.pythonanywhere.com', 'http://localhost:8000/']
 
 
 # Application definition
@@ -55,7 +55,12 @@ MIDDLEWARE = [
 ]
 
 # Allow all origins in development
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",
+    "https://pierreraphaelwozny.com",
+)
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
