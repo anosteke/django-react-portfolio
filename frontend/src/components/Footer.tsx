@@ -10,11 +10,11 @@ const Footer = () => {
       <footer className='footer'>
         <div className='footer-line'></div>
         <div className='categories font-extrabold'>
-            <a>Home</a>
-            <a>Resume</a>
-            <a>About</a>
-            <a>Linkedin</a>
-            <a>GitHub</a>
+            <a href={'/home'} >Home</a>
+            <a href={'/resumes'}>Resume</a>
+            <a href={'/about'}>About</a>
+            <a href={'https://www.linkedin.com/in/pierre-raphaël-wozny/'}  target="_blank">Linkedin</a>
+            <a href={'https://github.com/anosteke'}  target="_blank">GitHub</a>
         </div>
       </footer>
     );
