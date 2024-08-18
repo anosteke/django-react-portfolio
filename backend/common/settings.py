@@ -57,11 +57,6 @@ MIDDLEWARE = [
 # Allow all origins in development
 CORS_ALLOW_ALL_ORIGINS = False
 
-CORS_ORIGIN_WHITELIST = (
-    "http://localhost:3000",
-    "https://pierreraphaelwozny.com",
-)
-
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://pierreraphaelwozny.com",
