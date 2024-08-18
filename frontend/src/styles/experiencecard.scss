@@ -10,8 +10,8 @@ $secondary-text-color: #ffffff;
 $description-color: #ffffff;
 
 .experience-card {
-  width: calc(120px + 60vw);
-  max-width: 500px;
+  width: calc(50px + 60vw);
+  max-width: 600px;
   background: $color-green-dark;
   border-radius: 10px;
   padding: 20px;
@@ -66,6 +66,7 @@ $description-color: #ffffff;
       cursor: pointer;
       color: $color-green-dark;
       margin-left: 15px;
+      flex: none;
 
       height: 25px;
       width: 25px;
@@ -84,8 +85,8 @@ $description-color: #ffffff;
 .experience-body {
   margin-top: 5px;
   margin-bottom: 10px;
-  width: calc(120px + 60vw);
-  max-width: 500px;
+  width: calc(50px + 60vw);
+  max-width: 600px;
   background: $color-green-dark;
   margin-left: 20px;
   margin-right: 20px;
@@ -160,7 +161,7 @@ $description-color: #ffffff;
 }
 
 /* Media query to hide the flex item when the screen size is smaller than 800px */
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 800px) {
   .hide-on-small {
     display: none;
   }
