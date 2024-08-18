@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../styles//title.scss"
 import WaveSeparator from "./WaveSeparator";
 
@@ -52,19 +52,19 @@ const Title = () => {
   };
 
   return (
-      <div className="title-wrapper">
-        <div className="video-container ">
-          <video className="video" src={videoUrl} autoPlay={true} loop={true} muted={true} playsInline={true}/>
-        </div>
-        <div className="title">
-            <div className="greeting">Nice to meet you ! 😊</div>
-            <div className="name">I'm Pierre-Raphaël Wozny</div>
-            <div className="job">{text}</div>
-            {/* <img className="arrow" src="https://i.imgur.com/85AJGxP.png"/> */}
-        </div>
-        <WaveSeparator />
+    <div className="title-wrapper">
+      <div className="video-container ">
+        <video className="video" src="/background_video.mp4" autoPlay={true} loop={true} muted={true} playsInline={true}/>
       </div>
-  );  
+      <div className="title">
+        <div className="greeting">Nice to meet you ! 😊</div>
+        <div className="name">I'm Pierre-Raphaël Wozny</div>
+        <div className="job">{text}</div>
+        {/* <img className="arrow" src="https://i.imgur.com/85AJGxP.png"/> */}
+      </div>
+      <WaveSeparator />
+    </div>
+  );
 };
 
 export default Title;
