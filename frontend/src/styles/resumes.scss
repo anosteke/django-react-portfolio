@@ -2,17 +2,12 @@
 
 
 .resumes-background {
-    position: absolute;
     top: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 800px;
+    width: 100%;
     background-color: white;
     box-sizing: border-box;
-    // border: calc(6em - 2vw) solid $color-green-darker;
-    z-index: -1;
-
     z-index: -5;
-
 
     .resumes-container {
         margin-top: 100px;
@@ -26,13 +21,14 @@
         .resume {
             background-color: $color-green-dark;
             color: white;
-            width: 400px;
+            width: calc(50px + 60%);
+            max-width: (400px);
             height: 200px;
             vertical-align: middle;
             align-content: center;
             text-align: center;
             margin-top: 25px;
-            border-radius: 3%;
+            border-radius: 1%;
 
             &::before {
                 content: ''; // Create an overlay using a pseudo-element
@@ -59,16 +55,12 @@
 
                 }
 
-                ~&
-                {
+                ~& {
                     background-color: black;
                 }
 
                 transition: backdrop-filter 0.3s ease;
-
-                
             }
-
         }
     }
 }

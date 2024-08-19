@@ -2,19 +2,15 @@
 
 .footer
 {
-  margin-top: 75px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   flex-wrap: wrap;
   background-color: $color-green-darker;
   width: 100%;
 }
 
-
 a 
 {
   margin: 15px;
+  cursor: pointer;
 }
 
 .categories

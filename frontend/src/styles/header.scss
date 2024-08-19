@@ -1,4 +1,5 @@
 .header {
+  position: absolute;
     width: 100%;
     height: calc(5em - 2vw);
     display: flex;
@@ -69,21 +70,33 @@
     margin: 10px;
     width: 25px;
     filter: invert(1);
+    transition: all 0.2s ease;
   }
 
   
   .icon:hover
   {
+    transition: all 0.2s ease;
     filter: invert(0)
   }
 
-// .header-button
-// {
-//   color: white;
-//   background-color: transparent;
-//   border-color: white;
-//   border-width: 1.5px;
-//   border-style: solid;
-//   border-radius: 5px;
-//   border;
-// }
+  .header-button {
+    position: relative;
+    padding: 0.25em 0.5em;
+    font-size: 0.8em;
+    border: none;
+    outline: none;
+    color: black;
+    mix-blend-mode: screen;
+    border-radius: 0.3em;
+    background: white;
+    transition: all 0.2s ease;
+
+    &:hover
+    {
+      background: black;
+      color: white;
+      transition: all 0.2s ease;
+    }
+  }
+  
