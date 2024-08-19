@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import "../styles//title.scss"
 import WaveSeparator from "./WaveSeparator";
 
-const videoUrl = "https://www.pythonanywhere.com/user/prw/files/home/prw/django-react-portfolio/backend/mediafiles/videos/background_video.mp4";
-
 const Title = () => {
 
   const [loopNum, setLoopNum] = useState(0);

@@ -17,9 +17,9 @@ const Header = () => {
     
         <div className='background'></div>
         <nav className='nav'>
-          <button className="hover:bg-black bg-white font-bold py-0.75 px-4 rounded-full text-opacity-0 mix-blend-exclusion" onClick={() => navigate('/')}>Home</button>
-          <button className="hover:bg-black bg-white font-bold py-0.75 px-4 rounded-full text-opacity-0" onClick={() => navigate('/resumes')}>Resume</button>
-          <button className="hover:bg-black bg-white font-bold py-0.75 px-4 rounded-full text-opacity-0" onClick={() => navigate('/about')}>About</button>
+          <button className="header-button font-bold" onClick={() => navigate('/')}>Home</button>
+          <button className="header-button font-bold" onClick={() => navigate('/resumes')}>Resume</button>
+          <button className="header-button font-bold" onClick={() => navigate('/about')}>About</button>
         </nav>
       </header>
     );
