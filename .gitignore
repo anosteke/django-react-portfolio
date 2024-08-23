@@ -11,6 +11,7 @@
 
 # production
 frontend/build
+frontend/public
 
 # misc
 .DS_Store
